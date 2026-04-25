@@ -86,9 +86,9 @@ if __name__ == '__main__':
         try:
             # 画像ファイルを開く
             img = Image.open(file)
-            # サイズ調整 1/6
+            # サイズ調整 1/8
             img = img.resize(
-                (int(img.width / 6), int(img.height / 6)),
+                (int(img.width / 8), int(img.height / 8)),
                 Image.NEAREST
             )
             pil_images.append(img)
