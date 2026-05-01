@@ -86,9 +86,9 @@ if __name__ == '__main__':
         try:
             # 画像ファイルを開く
             img = Image.open(file)
-            # サイズ調整 1/8
+            # サイズ調整 1/10
             img = img.resize(
-                (int(img.width / 8), int(img.height / 8)),
+                (int(img.width / 10), int(img.height / 10)),
                 Image.NEAREST
             )
             pil_images.append(img)
@@ -109,8 +109,8 @@ if __name__ == '__main__':
     base_width = pil_images[0].width
     base_height = pil_images[0].height
     
-    window_position = (root.winfo_screenwidth() - base_width - 25,
-                       root.winfo_screenheight() - base_height - 50)
+    window_position = (root.winfo_screenwidth() - base_width - 20,
+                       root.winfo_screenheight() - base_height - 45)
 
     # クラスの呼び出し（画像リストを渡すように変更）
     TransparentWindow(main=root,
